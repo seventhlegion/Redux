@@ -1,17 +1,28 @@
 import Head from "next/head";
+import { useState } from "react";
 import { ThemeProvider } from "styled-components";
+import All from "./Components/All";
+import Appetiziers from "./Components/Appetiziers";
 import Filter from "./Components/Filter";
-import Items from "./Components/items";
+import Desserts from "./Components/Desserts";
+import Salads from "./Components/Salads";
 import Nav from "./Components/Nav";
+import Soup from "./Components/Soup";
 import { StyledContainer } from "./Components/Style/Container.style";
 import Global from './Components/Style/Global';
+import Main from "./Components/main";
 
 const theme = {
   bg: '#131d1b',
   fc: '#cc5050',
 }
 
+
+
 export default function Home() {
+
+  const [click, setClick] = useState('all')
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -21,8 +32,13 @@ export default function Home() {
     <Global />
     <Nav />
     <StyledContainer>
-    <Filter />
-    <Items />
+    <Filter setClick={setClick} />
+    {click === 'all'? <All />: ''}
+    {click === 'soups'? <Soup />: ''}
+    {click === 'desserts'? <Desserts />: ''}
+    {click === 'appetiziers'? <Appetiziers />: ''}
+    {click === 'salads'? <Salads />: ''}
+    {click === 'main'? <Main />: ''}
     </StyledContainer>
     </ThemeProvider>
   )

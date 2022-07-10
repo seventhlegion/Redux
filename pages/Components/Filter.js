@@ -1,20 +1,19 @@
-import React from 'react'
-import { StyledFilter } from './Style/Filter.style'
+import React from 'react';
+import { StyledFilter, StyledOnFocuse } from './Style/Filter.style';
 
-export default function Filter() {
+export default function Filter({setClick}) {
   return (
     <StyledFilter>
         <p>
             Filter
         </p>
         <div>
-            <input type={'button'} value={'All'} />
-            <input type={'button'} value={'Appetiziers'} />
-            <input type={'button'} value={'Soups'} />
-            <input type={'button'} value={'Salads'} />
-            <input type={'button'} value={'Warps'} />
-            <input type={'button'} value={'Entrees'} />
-            <input type={'button'} value={'Desserts'} />
+            <input type={'button'} value={'All'} onClick={() => setClick('all')} autoFocus={true}/>
+            <input type={'button'} value={'Appetiziers'} onClick={() => setClick('appetiziers')} />
+            <input type={'button'} value={'Soups'} onClick={() => setClick('soups')} onFocus={StyledOnFocuse}/>
+            <input type={'button'} value={'Salads'} onClick={() => setClick('salads')} />
+            <input type={'button'} value={'Main Course'} onClick={() => setClick('main')} />
+            <input type={'button'} value={'Desserts'} onClick={() => setClick('desserts')} />
         </div>
     </StyledFilter>
   )
