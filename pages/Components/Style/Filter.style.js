@@ -31,13 +31,19 @@ export const StyledFilter = styled.aside`
             height: 5rem;
             font-size: 1.15rem;
             background-color: #131D1B;
-            color: #BE2D2F;
+            color: #CC5050;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+            transition: transform 0.2s ease-in, background-color 0.2s ease-in;
             
 
             &:hover {
                 cursor: pointer;
                 background-color: #182220;
+            }
+
+            &:focus {
+                transform: scale(1.11);
+                border: #326662 solid 2px;
             }
         }
     }
