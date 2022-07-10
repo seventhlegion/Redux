@@ -27,7 +27,10 @@ export const StyledFilter = styled.aside`
             text-align: left;
             padding-left: 2rem;
             border: none;
-            border-bottom: 2px solid #326662;
+            border-bottom: 1px solid #326662;
+            border-right: 0.5px solid #326662;
+            border-top: 0.5px solid #326662;
+            border-left: none;
             height: 5rem;
             font-size: 1.15rem;
             background-color: #131D1B;
@@ -43,7 +46,6 @@ export const StyledFilter = styled.aside`
 
             &:focus {
                 transform: scale(1.11);
-                border: #326662 solid 2px;
             }
         }
     }
