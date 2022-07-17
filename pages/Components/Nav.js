@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { lastId } from "./Shopping/Shopping.reducer";
+import { useSelector } from "react-redux";
 import { StyledNav } from "./Style/Nav.style";
 
 export default function Nav() {
+  const total = useSelector((state) => state.shopcart.total);
   return (
     <StyledNav>
       <div className="logo-container">
@@ -26,7 +27,7 @@ export default function Nav() {
             alt={""}
           />
         </Link>
-        <p>{lastId}</p>
+        <p>{total}</p>
       </div>
     </StyledNav>
   );
