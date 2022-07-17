@@ -7,12 +7,12 @@ export const StyledShopCart = styled.div`
   margin: 1rem auto;
   width: 90%;
   padding: 0 1rem;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
   background-color: #131d1b;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 
-  .foods-container {
+  .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
