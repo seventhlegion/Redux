@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledShopCart = styled.div`
+export const StyledShopCart = styled(motion.div)`
+  * {
+    overflow-x: hidden;
+  }
+  
   display: flex;
   flex-direction: column;
   color: #cc5050;

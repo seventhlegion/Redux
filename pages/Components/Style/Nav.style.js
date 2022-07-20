@@ -2,80 +2,94 @@ import styled from "styled-components";
 
 export const StyledNav = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 1rem;
+  flex-direction: column;
+  top: 0;
+  z-index: 1;
+  position: sticky;
   background-color: #cc5050;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 
-  .logo-container {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    padding: 0 1rem;
-
-    .logo {
-      margin-right: 1rem;
-      align-self: center;
-      width: 3rem;
-      height: 3rem;
-      transition: transform 0.5s ease-in-out;
-
-      &:hover {
-        transform: scale(1.5);
-      }
-    }
-
-    h1 {
-      align-self: center;
-      text-align: center;
-      color: #131d1b;
-
-      &:hover {
-        cursor: default;
-      }
-    }
+  .bar-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #131d1b;
+    transform-origin: 0%;
   }
-
-  .button-container {
+  .total-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    flex-grow: 1;
-    padding: 0 1rem;
+    padding: 1rem;
 
-    .shop-button {
-      width: 2rem;
-      transition: transform 0.5s ease-in-out;
+    .logo-container {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      padding: 0 1rem;
 
-      &:hover {
-        transform: scale(1.1);
+      .logo {
+        margin-right: 1rem;
+        align-self: center;
+        width: 3rem;
+        height: 3rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      h1 {
+        align-self: center;
+        text-align: center;
+        color: #131d1b;
+
+        &:hover {
+          cursor: default;
+        }
       }
     }
 
-    p {
-      color: #131d1b;
-      margin-left: 0.1rem;
-      width: 1rem;
-      height: 1rem;
-    }
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      flex-grow: 1;
+      padding: 0 1rem;
 
-    .button {
-      align-self: center;
-      margin: 0 1rem 0 0;
-      height: 3rem;
-      width: 6rem;
-      background-color: #131d1b;
-      border-style: none;
-      border-radius: 50px;
-      font-size: 1.15rem;
-      color: #326662;
-      transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+      .shop-button {
+        width: 2rem;
 
-      &:hover {
-        cursor: pointer;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      p {
         color: #131d1b;
-        background-color: #326662;
+        margin-left: 0.1rem;
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .button {
+        align-self: center;
+        margin: 0 1rem 0 0;
+        height: 3rem;
+        width: 6rem;
+        background-color: #131d1b;
+        border-style: none;
+        border-radius: 50px;
+        font-size: 1.15rem;
+        color: #326662;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          color: #131d1b;
+          background-color: #326662;
+        }
       }
     }
   }

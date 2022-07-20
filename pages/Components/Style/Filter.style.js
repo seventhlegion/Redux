@@ -26,7 +26,6 @@ export const StyledFilter = styled.aside`
     input {
       text-align: left;
       padding-left: 2rem;
-      border: none;
       border-bottom: 0.5px solid #326662;
       border-right: none;
       border-top: 0.5px solid #326662;
@@ -36,15 +35,10 @@ export const StyledFilter = styled.aside`
       background-color: #131d1b;
       color: #cc5050;
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-      transition: transform 0.2s ease-in, background-color 0.2s ease-in;
+      outline: none;
 
       &:hover {
         cursor: pointer;
-        background-color: #182220;
-      }
-
-      &:focus {
-        transform: scale(1.11);
       }
     }
   }

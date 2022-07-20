@@ -1,33 +1,50 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { StyledFilter } from "./Style/Filter.style";
+import { motion } from "framer-motion";
 
 export default function Filter({ setClick }) {
+  const allRef = useRef(null);
+
+  useEffect(() => {
+    allRef.current.focus();
+  }, []);
   return (
     <StyledFilter>
       <p>Filter</p>
       <div>
-        <input type={"button"} value={"All"} onClick={() => setClick("all")} />
-        <input
+        <motion.input
+          ref={allRef}
+          whileFocus={{ scale: 1.1, opacity: 1 }}
+          type={"button"}
+          value={"All"}
+          onClick={() => setClick("all")}
+        />
+        <motion.input
+          whileFocus={{ scale: 1.1, opacity: 1 }}
           type={"button"}
           value={"Appetiziers"}
           onClick={() => setClick("appetiziers")}
         />
-        <input
+        <motion.input
+          whileFocus={{ scale: 1.1, opacity: 1 }}
           type={"button"}
           value={"Soups"}
           onClick={() => setClick("soups")}
         />
-        <input
+        <motion.input
+          whileFocus={{ scale: 1.1, opacity: 1 }}
           type={"button"}
           value={"Salads"}
           onClick={() => setClick("salads")}
         />
-        <input
+        <motion.input
+          whileFocus={{ scale: 1.1, opacity: 1 }}
           type={"button"}
           value={"Main Course"}
           onClick={() => setClick("main")}
         />
-        <input
+        <motion.input
+          whileFocus={{ scale: 1.1, opacity: 1 }}
           type={"button"}
           value={"Desserts"}
           onClick={() => setClick("desserts")}

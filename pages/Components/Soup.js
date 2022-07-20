@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import Foods from "../../public/Data/Foods";
 import { shopCartActions } from "../../redux/shopping/shopping.reducer";
 import { StyledFood } from "./Style/Food.style";
+import { motion } from "framer-motion";
+import { dropIn } from "./Backdrop/dropIn";
 
 export default function Soup() {
   const dispatch = useDispatch();
@@ -11,14 +13,22 @@ export default function Soup() {
       <StyledFood>
         {Foods.map((food) =>
           food.type === "soup" ? (
-            <div className="container">
+            <motion.div
+              className="container"
+              variants={dropIn}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
               <h1>{food.type === "soup" ? food.payload.name : null}</h1>
               <p>{food.type === "soup" ? food.payload.discriptions : null}</p>
               <div>
                 {food.type === "soup" ? (
-                  <input
-                    type={"button"}
-                    value={"Add To Cart"}
+                  <motion.button
+                    className="add-to-cart-btn"
+                    key={"soup"}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     onClick={() =>
                       dispatch(
                         shopCartActions.addTo({
@@ -28,12 +38,14 @@ export default function Soup() {
                         })
                       )
                     }
-                  />
+                  >
+                    Add To Cart
+                  </motion.button>
                 ) : null}
 
                 <p>{food.type === "soup" ? food.payload.cost + " $" : null}</p>
               </div>
-            </div>
+            </motion.div>
           ) : null
         )}
       </StyledFood>
