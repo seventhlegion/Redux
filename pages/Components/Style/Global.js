@@ -13,6 +13,18 @@ const Global = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
         background-color: #326662;
     }
+
+    .entering {
+
+    }
+
+    .entered {
+
+    }
+
+    .exit {
+        
+    }
 `;
 
 export default Global;

@@ -1,6 +1,6 @@
 export const Foods = [
   {
-    id: 1,
+    id: 0,
     type: "soup",
     payload: {
       name: "Milk Soup",
@@ -10,7 +10,7 @@ export const Foods = [
     },
   },
   {
-    id: 2,
+    id: 1,
     type: "soup",
     payload: {
       name: "Barley Soup",
@@ -20,7 +20,7 @@ export const Foods = [
     },
   },
   {
-    id: 3,
+    id: 2,
     type: "soup",
     payload: {
       name: "Cream Soup",
@@ -30,7 +30,7 @@ export const Foods = [
     },
   },
   {
-    id: 4,
+    id: 3,
     type: "soup",
     payload: {
       name: "Puree Soup",
@@ -40,7 +40,7 @@ export const Foods = [
     },
   },
   {
-    id: 5,
+    id: 4,
     type: "soup",
     payload: {
       name: "Bisque Soup",
@@ -50,7 +50,7 @@ export const Foods = [
     },
   },
   {
-    id: 6,
+    id: 5,
     type: "desserts",
     payload: {
       name: "Cho-cho Ice-Cream",
@@ -60,7 +60,7 @@ export const Foods = [
     },
   },
   {
-    id: 7,
+    id: 6,
     type: "desserts",
     payload: {
       name: "Macha",
@@ -70,7 +70,7 @@ export const Foods = [
     },
   },
   {
-    id: 8,
+    id: 7,
     type: "desserts",
     payload: {
       name: "Apple Pie",
@@ -80,7 +80,7 @@ export const Foods = [
     },
   },
   {
-    id: 9,
+    id: 8,
     type: "desserts",
     payload: {
       name: "Lemon Tiramisu",
@@ -90,7 +90,7 @@ export const Foods = [
     },
   },
   {
-    id: 10,
+    id: 9,
     type: "desserts",
     payload: {
       name: "Almond",
@@ -100,7 +100,7 @@ export const Foods = [
     },
   },
   {
-    id: 11,
+    id: 10,
     type: "appetizers",
     payload: {
       name: "Crispy Chicken Wings",
@@ -110,7 +110,7 @@ export const Foods = [
     },
   },
   {
-    id: 12,
+    id: 11,
     type: "appetizers",
     payload: {
       name: "Spanakopita Pockets",
@@ -120,7 +120,7 @@ export const Foods = [
     },
   },
   {
-    id: 13,
+    id: 12,
     type: "appetizers",
     payload: {
       name: "Cheesy Sriracha Chicken",
@@ -130,7 +130,7 @@ export const Foods = [
     },
   },
   {
-    id: 14,
+    id: 13,
     type: "appetizers",
     payload: {
       name: "Creamy Jalapeno Dip",
@@ -140,7 +140,7 @@ export const Foods = [
     },
   },
   {
-    id: 15,
+    id: 14,
     type: "appetizers",
     payload: {
       name: "Pepperoni Garlic Knots",
@@ -150,7 +150,7 @@ export const Foods = [
     },
   },
   {
-    id: 16,
+    id: 15,
     type: "appetizers",
     payload: {
       name: "Loaded Potato Skins",
@@ -160,7 +160,7 @@ export const Foods = [
     },
   },
   {
-    id: 17,
+    id: 16,
     type: "salad",
     payload: {
       name: "Classic Summer Salad",
@@ -170,7 +170,7 @@ export const Foods = [
     },
   },
   {
-    id: 18,
+    id: 17,
     type: "salad",
     payload: {
       name: "Best Broccoli Salad",
@@ -180,7 +180,7 @@ export const Foods = [
     },
   },
   {
-    id: 19,
+    id: 18,
     type: "salad",
     payload: {
       name: "Shredded Brussels Sprout Salad",
@@ -190,7 +190,7 @@ export const Foods = [
     },
   },
   {
-    id: 20,
+    id: 19,
     type: "salad",
     payload: {
       name: "Creamy Vegan Pasta Salad",
@@ -200,7 +200,7 @@ export const Foods = [
     },
   },
   {
-    id: 21,
+    id: 20,
     type: "salad",
     payload: {
       name: "Creamy Vegan Pasta Salad",
@@ -210,7 +210,7 @@ export const Foods = [
     },
   },
   {
-    id: 22,
+    id: 21,
     type: "main",
     payload: {
       name: "Braised Chicken Legs With Grapes and Fennel",
@@ -220,7 +220,7 @@ export const Foods = [
     },
   },
   {
-    id: 23,
+    id: 22,
     type: "main",
     payload: {
       name: "Seared Scallops With Brown Butter and Lemon Pan Sauce",
@@ -230,7 +230,7 @@ export const Foods = [
     },
   },
   {
-    id: 24,
+    id: 23,
     type: "main",
     payload: {
       name: "Grilled Pizza",
@@ -240,7 +240,7 @@ export const Foods = [
     },
   },
   {
-    id: 25,
+    id: 24,
     type: "main",
     payload: {
       name: "Double-Stack Mushroom and Chicken Cheeseburgers",
@@ -250,7 +250,7 @@ export const Foods = [
     },
   },
   {
-    id: 26,
+    id: 25,
     type: "main",
     payload: {
       name: "Quick Potato Gnocchi",

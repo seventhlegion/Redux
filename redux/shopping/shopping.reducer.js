@@ -5,7 +5,6 @@ export const shopSlice = createSlice({
   initialState: {
     foodsList: [],
     total: 0,
-    showCard: false,
   },
   reducers: {
     addTo: (state, action) => {
@@ -30,7 +29,6 @@ export const shopSlice = createSlice({
     },
     removeCart: (state, action) => {
       const id = action.payload;
-
       const existingFood = state.foodsList.find((food) => food.id === id);
 
       if (existingFood.quantity === 1) {
@@ -42,8 +40,18 @@ export const shopSlice = createSlice({
       state.total--;
     },
     fullRemove: (state, action) => {
-      
-    }
+      const id = action.payload;
+      const existingFood = state.foodsList.find((food) => food.id === id);
+      state.total -= existingFood.quantity;
+
+      if (existingFood.quantity !== 0) {
+        state.foodsList = state.foodsList.filter((food) => food.id !== id);
+      } else {
+        existingFood.quantity = 0;
+        existingFood.totalCost = 0;
+        existingFood.id.pop(state.foodsList.id);
+      }
+    },
   },
 });
 

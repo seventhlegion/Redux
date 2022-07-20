@@ -4,6 +4,7 @@ export const StyledFood = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-x: hidden;
 
   .container {
     color: #cc5050;
@@ -36,7 +37,7 @@ export const StyledFood = styled.div`
         font-size: 1.4rem;
       }
 
-      input {
+      .add-to-cart-btn {
         align-self: center;
         border: none;
         border-radius: 50px;
@@ -47,7 +48,7 @@ export const StyledFood = styled.div`
         font-size: 1.15rem;
         color: white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-        transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
         &:hover {
           cursor: pointer;
