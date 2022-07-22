@@ -1,18 +1,19 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import Foods from "../../public/Data/Foods";
-import { shopCartActions } from "../../redux/shopping/shopping.reducer";
+import Foods from "../public/Data/Foods";
+import { shopCartActions } from "../redux/shopping/shopping.reducer";
 import { StyledFood } from "./Style/Food.style";
 import { motion } from "framer-motion";
 import { dropIn } from "./Backdrop/dropIn";
 
-export default function Soup() {
+export default function Desserts() {
   const dispatch = useDispatch();
+
   return (
     <>
       <StyledFood>
         {Foods.map((food) =>
-          food.type === "soup" ? (
+          food.type === "desserts" ? (
             <motion.div
               className="container"
               variants={dropIn}
@@ -20,13 +21,15 @@ export default function Soup() {
               animate="visible"
               exit="exit"
             >
-              <h1>{food.type === "soup" ? food.payload.name : null}</h1>
-              <p>{food.type === "soup" ? food.payload.discriptions : null}</p>
+              <h1>{food.type === "desserts" ? food.payload.name : null}</h1>
+              <p>
+                {food.type === "desserts" ? food.payload.discriptions : null}
+              </p>
               <div>
-                {food.type === "soup" ? (
+                {food.type === "desserts" ? (
                   <motion.button
                     className="add-to-cart-btn"
-                    key={"soup"}
+                    key={"desserts"}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() =>
@@ -42,8 +45,9 @@ export default function Soup() {
                     Add To Cart
                   </motion.button>
                 ) : null}
-
-                <p>{food.type === "soup" ? food.payload.cost + " $" : null}</p>
+                <p>
+                  {food.type === "desserts" ? food.payload.cost + " $" : null}
+                </p>
               </div>
             </motion.div>
           ) : null

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import Foods from "../../public/Data/Foods";
-import { shopCartActions } from "../../redux/shopping/shopping.reducer";
+import Foods from "../public/Data/Foods";
+import { shopCartActions } from "../redux/shopping/shopping.reducer";
 import { StyledFood } from "./Style/Food.style";
 import { motion } from "framer-motion";
 import { dropIn } from "./Backdrop/dropIn";

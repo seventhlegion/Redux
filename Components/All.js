@@ -1,8 +1,8 @@
 import React from "react";
-import Foods from "../../public/Data/Foods";
+import Foods from "../public/Data/Foods";
 import { StyledFood } from "./Style/Food.style";
 import { useDispatch } from "react-redux";
-import { shopCartActions } from "../../redux/shopping/shopping.reducer";
+import { shopCartActions } from "../redux/shopping/shopping.reducer";
 import { motion } from "framer-motion";
 import { dropIn } from "./Backdrop/dropIn";
 

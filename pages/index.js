@@ -1,16 +1,16 @@
 import Head from "next/head";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { StyledContainer } from "./Components/Style/Container.style";
-import All from "./Components/All";
-import Appetiziers from "./Components/Appetiziers";
-import Filter from "./Components/Filter";
-import Desserts from "./Components/Desserts";
-import Salads from "./Components/Salads";
-import Nav from "./Components/Nav";
-import Soup from "./Components/Soup";
-import Global from "./Components/Style/Global";
-import Main from "./Components/main";
+import { StyledContainer } from "../Components/Style/Container.style";
+import All from "../Components/All";
+import Appetiziers from "../Components/Appetiziers";
+import Filter from "../Components/Filter";
+import Desserts from "../Components/Desserts";
+import Salads from "../Components/Salads";
+import Nav from "../Components/Nav";
+import Soup from "../Components/Soup";
+import Global from "../Components/Style/Global";
+import Main from "../Components/main";
 import { useSelector } from "react-redux";
 
 const theme = {

@@ -1,18 +1,18 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import Foods from "../../public/Data/Foods";
-import { shopCartActions } from "../../redux/shopping/shopping.reducer";
+import Foods from "../public/Data/Foods";
+import { shopCartActions } from "../redux/shopping/shopping.reducer";
 import { StyledFood } from "./Style/Food.style";
 import { motion } from "framer-motion";
 import { dropIn } from "./Backdrop/dropIn";
 
-export default function Main() {
+export default function Salads() {
   const dispatch = useDispatch();
   return (
     <>
       <StyledFood>
         {Foods.map((food) =>
-          food.type === "main" ? (
+          food.type === "salad" ? (
             <motion.div
               className="container"
               variants={dropIn}
@@ -20,13 +20,13 @@ export default function Main() {
               animate="visible"
               exit="exit"
             >
-              <h1>{food.type === "main" ? food.payload.name : null}</h1>
-              <p>{food.type === "main" ? food.payload.discriptions : null}</p>
+              <h1>{food.type === "salad" ? food.payload.name : null}</h1>
+              <p>{food.type === "salad" ? food.payload.discriptions : null}</p>
               <div>
-                {food.type === "main" ? (
+                {food.type === "salad" ? (
                   <motion.button
                     className="add-to-cart-btn"
-                    key={"main"}
+                    key={"salad"}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() =>
@@ -42,7 +42,7 @@ export default function Main() {
                     Add To Cart
                   </motion.button>
                 ) : null}
-                <p>{food.type === "main" ? food.payload.cost + " $" : null}</p>
+                <p>{food.type === "salad" ? food.payload.cost + " $" : null}</p>
               </div>
             </motion.div>
           ) : null
