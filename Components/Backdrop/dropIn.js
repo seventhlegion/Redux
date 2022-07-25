@@ -4,16 +4,14 @@ export const dropIn = {
   },
   visible: {
     x: "0",
-    opacity: 1,
     transition: {
-      duration: 0.1,
+      duration: 0.01,
       type: "spring",
       damping: 25,
       stiffness: 100,
     },
   },
   exit: {
-    x: "-100vh",
-    opacity: 0,
+    y: "100vh",
   },
 };
