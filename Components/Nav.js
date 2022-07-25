@@ -1,27 +1,32 @@
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { StyledNav } from "./Style/Nav.style";
-import { motion, useSpring, useViewportScroll } from "framer-motion";
-import { useRef } from "react";
+import { motion, useSpring, useScroll } from "framer-motion";
+import { Fragment, useRef, useState } from "react";
+import { SearchBar } from "./SearchBar";
+import { useSearch } from "./Hooks/useSearch";
 
-export default function Nav() {
+export default function Nav({ setQuery }) {
   const total = useSelector((state) => state.shopcart.total);
-  const { scrollYProgress } = useViewportScroll();
-  const scaleX = useSpring(scrollYProgress, {
+  const { scrollYProgress } = useScroll();
+  const scrollProgress = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 20,
     restDelta: 0.001,
   });
-
   const scrollRef = useRef();
 
+  const changeHandeler = (e) => {
+    setQuery(e.target.value);
+  };
+
   return (
-    <>
+    <Fragment>
       <StyledNav>
         <motion.div
           className="bar-progress"
           viewport={{ root: scrollRef }}
-          style={{ scaleX }}
+          style={{ scaleX: scrollProgress }}
         />
         <div className="total-container">
           <div className="logo-container">
@@ -42,6 +47,7 @@ export default function Nav() {
             </Link>
             <h1>Carrot Marrot</h1>
           </div>
+          <SearchBar change={changeHandeler} />
           <div className="button-container">
             <motion.button
               className="button"
@@ -73,6 +79,6 @@ export default function Nav() {
           </div>
         </div>
       </StyledNav>
-    </>
+    </Fragment>
   );
 }
