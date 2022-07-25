@@ -27,6 +27,7 @@ export const StyledNav = styled.div`
       display: flex;
       flex-direction: row;
       flex-grow: 1;
+
       padding: 0 1rem;
 
       .logo {
@@ -55,7 +56,6 @@ export const StyledNav = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      flex-grow: 1;
       padding: 0 1rem;
 
       .shop-button {

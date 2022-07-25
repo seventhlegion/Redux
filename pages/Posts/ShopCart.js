@@ -1,11 +1,11 @@
 import Head from "next/head";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { motion } from "framer-motion";
 import { shopCartActions } from "../../redux/shopping/shopping.reducer";
-import { StyledShopCart } from "../Components/Style/ShopCart.stale";
-import Nav from "../Components/Nav";
-import Global from "../Components/Style/Global";
-import { motion, AnimatePresence } from "framer-motion";
+import { StyledShopCart } from "../../Components/Style/ShopCart.stale";
+import Nav from "../../Components/Nav";
+import Global from "../../Components/Style/Global";
 
 export default function ShopCart() {
   let total = 0;
