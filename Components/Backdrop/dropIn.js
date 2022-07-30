@@ -8,7 +8,7 @@ export const dropIn = {
       duration: 0.01,
       type: "spring",
       damping: 25,
-      stiffness: 100,
+      stiffness: 500,
     },
   },
   exit: {
