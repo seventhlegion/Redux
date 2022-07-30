@@ -1,0 +1,49 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "airbnb",
+    "next",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "prettier"],
+  "rules": {
+    "indent": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "allowEmptyCatch": "off",
+    "no-shadow": "off",
+    "no-nested-ternary": "off",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "all",
+        "printWidth": 80,
+        "parser": "flow",
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}
