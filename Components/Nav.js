@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useSelector } from "react-redux";
-import { StyledNav } from "./Style/Nav.style";
+import { useRouter } from "next/router";
+import { Fragment, useRef } from "react";
 import { motion, useSpring, useScroll } from "framer-motion";
-import { Fragment, useRef, useState } from "react";
+import { StyledNav } from "./Style/Nav.style";
 import { SearchBar } from "./SearchBar";
-import { useSearch } from "./Hooks/useSearch";
 
 export default function Nav({ setQuery }) {
   const total = useSelector((state) => state.shopcart.total);
@@ -15,6 +15,8 @@ export default function Nav({ setQuery }) {
     restDelta: 0.001,
   });
   const scrollRef = useRef();
+
+  const searchBarHandler = useRouter();
 
   const changeHandeler = (e) => {
     setQuery(e.target.value);
@@ -47,7 +49,11 @@ export default function Nav({ setQuery }) {
             </Link>
             <h1>Carrot Marrot</h1>
           </div>
-          <SearchBar change={changeHandeler} />
+          {searchBarHandler.pathname !== "/Posts/ShopCart" ? (
+            <SearchBar change={changeHandeler} />
+          ) : (
+            <Fragment></Fragment>
+          )}
           <div className="button-container">
             <motion.button
               className="button"

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { shopCartActions } from "../../redux/shopping/shopping.reducer";
@@ -31,10 +31,10 @@ export default function ShopCart() {
           x: "0",
           opacity: 1,
           transition: {
-            duration: 0.1,
+            duration: 0.01,
             type: "spring",
             damping: 25,
-            stiffness: 100,
+            stiffness: 500,
           },
         }}
         exit={{ x: "100vh", opacity: 0 }}
@@ -48,18 +48,16 @@ export default function ShopCart() {
               y: "0",
               opacity: 1,
               transition: {
-                duration: 0.1,
+                duration: 0.01,
                 type: "spring",
                 damping: 25,
-                stiffness: 100,
+                stiffness: 500,
               },
             }}
             exit={{ y: "100vh", opacity: 0 }}
           >
             <h3>{food.name}</h3>
-            <p>{`Price: ${food.cost} $, Total: ${food.totalCost.toFixed(
-              1
-            )} $`}</p>
+            <p>{`Price: ${food.cost}`}</p>
             <motion.input
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

@@ -2,20 +2,17 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const StyledShopCart = styled(motion.div)`
-  * {
-    overflow-x: hidden;
-  }
-  
   display: flex;
   flex-direction: column;
   color: #cc5050;
   margin: 1rem auto;
   width: 90%;
   padding: 0 1rem;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-  background-color: #131d1b;
   border-radius: 10px;
+  background-color: #131d1b;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
 
   .container {
     display: flex;

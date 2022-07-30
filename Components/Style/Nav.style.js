@@ -83,7 +83,7 @@ export const StyledNav = styled.div`
         border-radius: 50px;
         font-size: 1.15rem;
         color: #326662;
-        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
 
         &:hover {
           cursor: pointer;
