@@ -15,14 +15,14 @@ const useSearch = (query) => {
     setError(false);
 
     Foods.map((food) => {
-      query === food.payload.name.toLocaleLowerCase()
+      return query === food.payload.name.toLocaleLowerCase()
         ? setSearchFood((prevFood) => {
             return [...new Set([...prevFood, food])];
           })
         : setError(true);
     });
     Foods.map((food) => {
-      query === food.type.toLocaleLowerCase()
+      return query === food.type.toLocaleLowerCase()
         ? setSearchFood((prevFood) => {
             return [...new Set([...prevFood, food])];
           })
